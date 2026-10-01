@@ -4,8 +4,6 @@ env:
   APP_ENV: "dev"
 jobs:
   test-env:
-    env:
-      APP_ENV: "test"
     runs-on: ubuntu-latest
     steps:
       - name: print env
