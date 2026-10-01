@@ -1,11 +1,20 @@
 name: test
-on: push
-env:
-  APP_ENV: "dev"
-jobs:
-  test-env:
-    runs-on: ubuntu-latest
-    steps:
-      - name: print env
-        run: echo "$APP_ENV"  
-  
+on:
+  workflow_dispatch:
+  inputs:
+    environments:
+     description: "select environments" 
+     required: true
+     default: dev
+    OS:
+     description: "select os"
+      required: true
+      default: ubuntu_latest 
+  jobs:
+    test:
+      runs-on: ${{ inputs.OS }}
+      steps:
+        -name: deploy to env
+        run: echo "print ${{ inputs.environments }}
+    
+
