@@ -15,6 +15,6 @@ on:
       runs-on: ${{ inputs.OS }}
       steps:
         -name: deploy to env
-        run: echo "print ${{ inputs.environments }}
+        run: echo "print ${{ inputs.environments }}"
     
 
