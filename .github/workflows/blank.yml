@@ -6,15 +6,14 @@ on:
      description: "select environments" 
      required: true
      default: dev
-    OS:
-     description: "select os"
+  OS:
+     description: "select OS"
       required: true
-      default: ubuntu_latest 
-  jobs:
-    test:
-      runs-on: ${{ inputs.OS }}
-      steps:
-        -name: deploy to env
-        run: echo "print ${{ inputs.environments }}"
-    
+      default: ubuntu-latest
+jobs:
+  test-job:
+    runs-on: $ {{ inputs.OS }}
+    steps:
+      -name: deploy to env
+      run: echo "print $ {{ inputs.environments }}"
 
