@@ -6,7 +6,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: print welcome message
-        run: echo"welcome"
+        run: echo "welcome"
   test:
     runs-on: ubuntu-latest
     needs: 
