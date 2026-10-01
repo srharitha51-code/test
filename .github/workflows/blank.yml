@@ -1,10 +1,23 @@
-name: test
-on: workflow_dispatch
+name: ci/cd
+on: 
+  push: 
 jobs:
-  job1:
+  build:
     runs-on: ubuntu-latest
     steps:
-      - run: pwd
-      - name: print the welcome message
-        run: echo "welcome"
-      - run: du -h
+      - name: print welcome message
+        run: echo"welcome"
+  test:
+    runs-on: ubuntu-latest
+    needs: 
+      build
+    steps:
+      - name: print step1 completed
+        run: completed
+  deploy:
+    runs-on: ubuntu-latest
+    needs: 
+      test
+    steps:
+      - name: print step2 complted
+        run: completed
