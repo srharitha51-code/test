@@ -9,7 +9,5 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: print env
-        env:
-          APP_ENV: "prod"
         run: echo "$APP_ENV"  
   
