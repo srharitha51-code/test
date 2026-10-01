@@ -13,7 +13,7 @@ jobs:
       build
     steps:
       - name: print step1 completed
-        run: echo " completed ${{ secrets.TEST-1 }}"
+        run: echo " completed ${{ secrets.TEST }}"
   deploy:
     runs-on: ubuntu-latest
     needs: 
