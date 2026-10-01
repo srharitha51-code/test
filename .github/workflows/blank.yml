@@ -1,0 +1,10 @@
+name: test
+on: workflow_dispatch
+jobs:
+  job1:
+    runs-on: ubuntu-latest
+    steps:
+      - run: pwd
+      - name: print the welcome message
+        run: echo "welcome"
+      - run: du -h
