@@ -13,11 +13,11 @@ jobs:
       build
     steps:
       - name: print step1 completed
-        run: completed
+        run: echo "completed"
   deploy:
     runs-on: ubuntu-latest
     needs: 
       test
     steps:
       - name: print step2 complted
-        run: completed
+        run: echo "completed"
